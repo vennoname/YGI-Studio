@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Animation Showcase</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            background-color: #0f0d1e; /* Dark background */
+            color: #ffffff; /* White text */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .feature-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two columns */
+            gap: 20px;
+        }
+
+        .feature-logo {
+            background-color: #29254c;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+        }
+
+        .feature-logo img {
+            width: 60%;
+            object-fit: contain;
+        }
+
+        .feature-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #cfcfcf;
+        }
+
+        /* 3D Elements */
+        .decorative-element {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translate(-50%, -50%) rotate(30deg);
+            width: 150px;
+            height: auto;
+            z-index: 2;
+        }
+
+        .bottom-element {
+            position: absolute;
+            bottom: 10px;
+            right: 10%;
+            transform: rotate(-15deg);
+            width: 150px;
+        }
+
+        .jumbotron-video {
+            position: relative;
+            overflow: hidden;
+            height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .jumbotron-video video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .jumbotron-video .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .content h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .features-section {
+            padding: 50px 15px;
+            background-color: #f8f9fa;
+        }
+
+        .features-section .feature {
+            margin-bottom: 30px;
+        }
+
+        .feature h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <section class="jumbotron-video">
+        <!-- Background Video -->
+        <video autoplay muted loop>
+            <source src="../Assests/171365-845439625_small.mp4" type="video/mp4">
+            <source src="../Assests/171365-845439625_small.mp4" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+        <!-- Content on Top -->
+        <div class="container content text-center">
+            <h1 class="text-uppercase fw-bold mb-4">Animate 3D Models with Us</h1>
+            <p class="fs-5 mb-4">
+                Let our superfly AI handle your 3D animation rigging instantly.<br>
+                Perfect for animation enthusiasts and game developers alike.
+            </p>
+            <button class="btn btn-primary btn-lg align-items-center" type="button">
+                <i class="bi bi-arrow-bar-up me-2"></i>Upload Your Model</button>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4 feature">
+                    <div class="p-4 bg-dark text-light rounded shadow-sm">
+                        <div class="ratio ratio-16x9 mb-3">
+                            <video src="../Assests/219615_small.mp4" autoplay muted loop class="rounded"></video>
+                        </div>
+                        <h2 class="h5">Upload</h2>
+                        <p>Upload any model and materials and we’ll get onto it.</p><br>
+                        <button class="btn btn-outline-light" type="button">Upload</button>
+                    </div>
+                </div>
+                <div class="col-md-4 feature">
+                    <div class="p-4 bg-secondary text-light rounded shadow-sm">
+                        <div class="ratio ratio-16x9 mb-3">
+                            <video src="../Assests/93836-641767488_small.mp4" autoplay muted loop class="rounded"></video>
+                        </div>
+                        <h2 class="h5">Animations</h2>
+                        <p>You can view and save your model’s new animations</p><br>
+                        <button class="btn btn-outline-light" type="button">Learn More</button>
+                    </div>
+                </div>
+                <div class="col-md-4 feature">
+                    <div class="p-4 bg-primary text-light rounded shadow-sm">
+                        <div class="ratio ratio-16x9 mb-3">
+                            <video src="../Assests/37422-414024545_small.mp4" autoplay muted loop class="rounded"></video>
+                        </div>
+                        <h2 class="h5">Build</h2>
+                        <p>Get cracking on creating your 3D world</p><br><br>
+                        <button class="btn btn-outline-light" type="button">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container my-5">
+        <div class="feature-box">
+            <div class="row g-1 justify-content-center align-items-center">
+                <!-- Logo 1 -->
+                <div class="col-md-3 col-6 text-center">
+                    <div class="logo-wrapper bg-gradient rounded shadow-lg p-4">
+                        <img src="../Assests/6_Adobe_logo_logos-512.webp" alt="Adobe Logo" class="img-fluid logo-img">
+                    </div>
+                </div>
+                <!-- Logo 2 -->
+                <div class="col-md-3 col-6 text-center">
+                    <div class="logo-wrapper bg-gradient rounded shadow-lg p-4">
+                        <img src="../Assests/unity-icon-512x512-kdsx9w7b.png" alt="Unity Logo" class="img-fluid logo-img">
+                    </div>
+                </div>
+                <!-- Logo 3 -->
+                <div class="col-md-3 col-6 text-center">
+                    <div class="logo-wrapper bg-gradient rounded shadow-lg p-4">
+                        <img src="../Assests/unreal.png" alt="Unreal Logo" class="img-fluid logo-img">
+                    </div>
+                </div>
+                <!-- Logo 4 -->
+                <div class="col-md-3 col-6 text-center">
+                    <div class="logo-wrapper bg-gradient rounded shadow-lg p-4">
+                        <img src="../Assests/blender-icon.webp" alt="Blender Logo" class="img-fluid logo-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container my-5">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-0 feature-text" style="margin-bottom: 12px;">
+                <h1 class="feature-title">Use your models anywhere</h1>
+                <p class="feature-description">
+                    Download your model animations in all standard 3D formats, ready to import into Unreal, Unity, Blender, Maya, and more.
+                </p>
+            </div>
+        </div>
+        <button class="btn btn-primary btn-lg align-items-center" type="button">
+            <i class="bi bi-arrow-bar-up me-2"></i>Upload Your Model</button>
+    </div>
+    
+    <section style="background-color: antiquewhite;">
+        <!-- Add content for this section if needed -->
+    </section>
+
+    
+    
+    
+    <footer class="px-3 py-2 text-bg-dark border-bottom">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>&copy; 2017–2024 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+</body>
+</html>

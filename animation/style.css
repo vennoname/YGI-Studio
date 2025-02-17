@@ -1,0 +1,69 @@
+/* General Styles */
+body {
+    background-color: #0b0c10; /* Dark background for contrast */
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Logo Wrapper */
+.logo-wrapper {
+    background: linear-gradient(135deg, #212529, #343a40); /* Dark gradient background */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-wrapper:hover {
+    transform: translateY(-10px); /* Hover Lift Effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Dynamic shadow */
+}
+
+/* Logo Images */
+.logo-img {
+    max-width: 100px;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+    transition: filter 0.3s ease;
+}
+
+.logo-img:hover {
+    filter: drop-shadow(0 6px 10px rgba(0, 255, 255, 0.6)); /* Glowing hover effect */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .logo-wrapper {
+        padding: 1.5rem;
+    }
+    .logo-img {
+        max-width: 80px;
+    }
+    /* Text Section Styles */
+.feature-text {
+    text-align: left;
+    color: #ffffff; /* White text */
+}
+
+.feature-title {
+    font-size: 3rem; /* Large heading */
+    font-weight: 700; /* Bold weight */
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #ffffff; /* White text */
+}
+
+.feature-description {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+    max-width: 500px; /* Limit paragraph width */
+}
+
+/* Responsive Text Adjustments */
+@media (max-width: 768px) {
+    .feature-title {
+        font-size: 2.5rem;
+    }
+    .feature-description {
+        font-size: 1rem;
+    }
+}
+
+}
